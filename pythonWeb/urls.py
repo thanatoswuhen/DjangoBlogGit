@@ -19,7 +19,7 @@ from article import views
 import article
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', article.views.home),
-    path('<int:id>', article.views.detail),
+    path('', article.views.home,name='home'),
+    path('<int:id>', article.views.detail,name='detail'),
     path('test/', article.views.test),
 ]
